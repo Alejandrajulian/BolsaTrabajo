@@ -10,11 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace BolsaDeTrabajo.Vistas
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Registro : ContentPage
+	public partial class ViewTrabajo : ContentPage
 	{
-		public Registro ()
+		public ViewTrabajo ()
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void LstTrabajos_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+        }
+    }
 }

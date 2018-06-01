@@ -15,7 +15,7 @@ namespace BolsaDeTrabajo
 			InitializeComponent();
             btnExito.Clicked += (sender, e) =>
             {
-                Navigation.PushAsync(new Registro());
+                Navigation.PushAsync(new ViewRegistro());
             };
 		}
 	}
