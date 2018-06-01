@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BolsaDeTrabajo"
+             x:Class="BolsaDeTrabajo.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Estas a un paso de encontrar el trabajo de tus sueños. Sólo pulsa el siguiente botón para continuar" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" Grid.Row="0" />
+        <Button x:Name="btnExito" Text="EL CAMINO AL EXITO" Grid.Row="1" HorizontalOptions="CenterAndExpand" Margin="30,10"/>
+
+    </Grid>
+    
+</ContentPage>
