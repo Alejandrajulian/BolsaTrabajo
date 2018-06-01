@@ -15,8 +15,8 @@ namespace BolsaTrabajo.DAL
 
         public GenericRepository()
         {
-            client = new MongoClient(new MongoUrl(@""));
-            db = client.GetDatabase("");
+            client = new MongoClient(new MongoUrl(@"mongodb://Admin:admin123@ds016068.mlab.com:16068/bolsatrabajo"));
+            db = client.GetDatabase("bolsatrabajo");
         }
 
         private IMongoCollection<T> Collection()

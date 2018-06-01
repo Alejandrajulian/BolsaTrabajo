@@ -12,6 +12,7 @@ namespace BolsaTrabajo.COMMON.Entidades
         public string Ubicacion { get; set; }
         public string CorreoElectronico { get; set; }
         public string Telefono { get; set; }
+        public string Escolaridad { get; set; }
         public DateTime FechaRegistro { get; set; }
     }
 }

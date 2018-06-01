@@ -55,6 +55,7 @@ namespace BolsaTrabajo.BIZ
                     Ubicacion = ubicacion,
                     CorreoElectronico = email,
                     Telefono = telefono,
+                    Escolaridad = escolaridad,
                     FechaRegistro = fecharegistro
                 });
             }

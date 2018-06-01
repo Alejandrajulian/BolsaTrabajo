@@ -4,20 +4,45 @@
              x:Class="BolsaDeTrabajo.Vistas.ViewTrabajo"
              Title="Lista de trabajos">
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hola" FontSize="Medium" Margin="0,10" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+                <Label x:Name="txtNombreUsuario" FontSize="Medium" Margin="0,10" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Aquí mostramos algunos empleos con base a los datos que nos has proporcionado" Margin="20,0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <Label Text="Estos son los datos que nos proporcionaste" Margin="20,0" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
 
-            <ListView x:Name="lstTrabajos" ItemSelected="LstTrabajos_ItemSelected" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Empresa}" Detail="{Binding Empleo}"/>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            
-        </Grid>
+                <Label Text="Edad" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" Margin="10,0" Grid.Row="3" Grid.Column="0"/>
+                <Label Text="Escolaridad" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" Margin="10,0" Grid.Row="4" Grid.Column="0"/>
+                <Label Text="Ubicación" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" Margin="10,0" Grid.Row="5" Grid.Column="0"/>
+
+                <Label x:Name="txtEdad" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" Margin="10,0" Grid.Row="3" Grid.Column="1"/>
+                <Label x:Name="txtEscolaridad" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" Margin="10,0" Grid.Row="4" Grid.Column="1"/>
+                <Label x:Name="txtUbicacion" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" Margin="10,0" Grid.Row="5" Grid.Column="1"/>
+                <Label Text="Estos son algunos empleos que podrían interesarte:" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+                <ListView x:Name="lstTrabajos" ItemSelected="LstTrabajos_ItemSelected" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding TituloEmpresa}" Detail="{Binding Empleo}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
